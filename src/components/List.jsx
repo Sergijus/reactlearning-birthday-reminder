@@ -11,11 +11,7 @@ const List = () => {
       {people.map((person) => {
         const { img, name, age, id } = person;
 
-        return (
-          <div key={id}>
-            <Person img={img} name={name} age={age} />
-          </div>
-        );
+        return <Person key={id} img={img} name={name} age={age} />;
       })}
 
       <button
