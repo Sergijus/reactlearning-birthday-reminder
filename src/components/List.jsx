@@ -5,14 +5,27 @@ import { useState } from 'react';
 const List = () => {
   const [people, setPeople] = useState(data);
 
-  return people.map((person) => {
-    const { img, name, age, id } = person;
+  return (
+    <div className="container">
+      <h3>{people.length} birthdays today</h3>
+      {people.map((person) => {
+        const { img, name, age, id } = person;
 
-    return (
-      <div className="container" key={id}>
-        <Person img={img} name={name} age={age} />
-      </div>
-    );
-  });
+        return (
+          <div key={id}>
+            <Person img={img} name={name} age={age} />
+          </div>
+        );
+      })}
+
+      <button
+        type="button"
+        className="btn btn-block"
+        onClick={() => setPeople([])}
+      >
+        Clear all {people.length} items
+      </button>
+    </div>
+  );
 };
 export default List;

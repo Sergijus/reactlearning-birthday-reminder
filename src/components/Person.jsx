@@ -1,9 +1,9 @@
 const Person = ({ img, name, age }) => {
   return (
     <div className="person">
-      <img src={img} />
-      <h2>{name}</h2>
-      <h3>{age}</h3>
+      <img src={img} style={{ objectFit: 'cover' }} />
+      <h4>{name}</h4>
+      <p>{age} years</p>
     </div>
   );
 };

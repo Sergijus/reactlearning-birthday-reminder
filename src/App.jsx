@@ -2,10 +2,10 @@ import List from './components/List';
 
 const App = () => {
   return (
-    <div>
+    <main>
       <h2>Birthday Reminder</h2>
       <List />
-    </div>
+    </main>
   );
 };
 export default App;
