@@ -1,4 +1,11 @@
+import List from './components/List';
+
 const App = () => {
-  return <h2>Birthday Reminder - Starter</h2>;
+  return (
+    <div>
+      <h2>Birthday Reminder</h2>
+      <List />
+    </div>
+  );
 };
 export default App;
